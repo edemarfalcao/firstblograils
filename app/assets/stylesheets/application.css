@@ -1,0 +1,134 @@
+* {
+    margin: 0px auto;
+    padding: 0px 0px;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #D4AC2B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .grid {
+    width: 100vw;
+    padding: 20px;
+
+  }
+  .card {
+    overflow: hidden;
+    background-color: rgb(255, 206, 69, 0.75);
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .card-img {
+    width: 20rem;
+    height: auto;
+  }
+  .card-content {
+    padding: 20px;
+  }
+  .card-title {
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    font-size: 30px;
+    display: inline-block;
+    border-bottom: 2px solid red;
+    font-family: "Raleway", sans-serif;
+  }
+  .card-description {
+    text-align: justify;
+    font-family: "Roboto Slab", sans-serif;
+  }
+
+.card-actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: auto;
+    padding: 10px;}
+  .card:hover {
+    transform: translateY(1.5%);
+    transition: 0.5s;
+  
+  }
+  a {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Raleway", sans-serif;
+    text-decoration: none;
+    color: black;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    border-left: 2px solid red;
+    margin: 0 0 36px;
+    opacity: 0;
+    padding-left: 20px;
+  }
+  
+  li:nth-child(1) {
+    opacity: 1;
+  }
+  li:nth-child(2) {
+    opacity: 0.9;
+  }
+  li:nth-child(3) {
+    opacity: 0.8;
+  }
+  li:nth-child(4) {
+    opacity: 0.7;
+  }
+  li:nth-child(5) {
+    opacity: 0.6;
+  }
+  li:nth-child(6) {
+    opacity: 0.5;
+  }
+  li:nth-child(7) {
+    opacity: 0.4;
+  }
+  li:nth-child(8) {
+    opacity: 0.3;
+  }
+  li:nth-child(9) {
+    opacity: 0.2;
+  }
+  li:nth-child(10) {
+    opacity: 0.1;
+  }
+  li:nth-child(11) {
+    opacity: 0;
+  }
+
+  input {
+      border-radius: 3px;
+      box-shadow: 0, 
+  }
+
+  select {
+      border-radius: 3px;
+      padding: 8px;
+      background-color: transparent;
+      margin: auto;
+      border-color: red;
+  }
+
+
+
+
+
+  
+  

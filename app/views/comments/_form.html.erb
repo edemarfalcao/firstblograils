@@ -1,0 +1,17 @@
+<%= form_with model: [ @article, @article.comments.build ] do |form| %>
+   <div class="form-group text-center">
+    <p>
+      <%= form.text_field :commenter, placeholder: "Commenter", class:'input-group-text d-inline' %>
+    </p>
+    <p>
+      <%= form.text_field :body, placeholder: "Comment", class:'input-group-text d-inline' %>
+    </p>
+    <p>
+       <%= form.select :status,['Public', 'Private', 'Archived'], {}, {required: 'true', autofocus: 'true', class: 'input-group-text mb-4 d-inline', elected: 'Public'} %>
+       <%= form.submit class: 'btn btn-danger d-inline'%>
+
+    </p>
+      
+  </div> 
+  <% end %>
+  

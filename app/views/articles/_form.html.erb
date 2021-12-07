@@ -1,0 +1,25 @@
+<div class="text-center">
+<%= form_with model: article do |form| %>
+    <div>
+      <%= form.text_field :title , placeholder: "Title", class:'input-group-text'  %>
+      <% article.errors.full_messages_for(:title).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  
+    <div>
+      <%= form.text_field :body, placeholder: "Body", class:'input-group-text mt-2' %><br>
+      <% article.errors.full_messages_for(:body).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+   
+     
+    <div>
+      <%= form.select :status,['Public', 'Private', 'Archived'], {}, {required: 'true', autofocus: 'true', class: 'input-group-text mb-4 d-inline', elected: 'Public'} %>
+       <%= form.submit class: 'btn btn-danger d-inline'%>
+    </div>
+  
+ 
+  <% end %>
+</div>

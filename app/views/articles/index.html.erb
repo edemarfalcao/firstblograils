@@ -1,0 +1,30 @@
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1546900703-cf06143d1239?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1150&q=80" alt="" loading="lazy" class="card-img" />
+<div class="card-content">
+<h1 class="card-title">Articles</h1>
+
+<h6> 
+Our blog has <%= Article.public_count %> articles and counting!
+</h6>
+
+
+ <br />
+
+
+<ul>
+  <% @articles.each do |article| %>
+    <% unless article.archived? %>
+      <li>
+        <%= link_to article.title, article %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+
+<div>
+<%= link_to "New Article", new_article_path %>
+</div>
+</div>
+</div>
+</div>

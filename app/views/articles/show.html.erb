@@ -1,0 +1,29 @@
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1546900703-cf06143d1239?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1150&q=80" alt="" loading="lazy" class="card-img" />
+<div class="card-content">
+<h1 style="font-size: 30px" class="card-title"><%= @article.title %></h1>
+
+
+
+
+ <p ><%= @article.body %></p>
+
+<div class="card-actions">
+ <button class="btn" ><%= link_to "Edit", edit_article_path(@article) %></button>
+   <button class="btn" ><%= link_to "Destroy", article_path(@article),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></button>
+</div>
+<div id="comments"> 
+<h6 class="card-title">Comments</h6>
+<p>
+<%= render @article.comments %>
+</p>
+</div>
+<p>Add a comment:</p>
+<%= render 'comments/form' %>
+
+</div>
+</div>
+</div>
